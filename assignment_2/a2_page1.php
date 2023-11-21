@@ -5,6 +5,11 @@ table, th, td {
   border:1px solid black;
 }
 </style>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Complete cookbook</title>
+    </head>
 <body>
 <?php
 include 'a2_banner.php';
