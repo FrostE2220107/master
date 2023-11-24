@@ -10,11 +10,11 @@
 	// Is a keyword provided in the URL?
 	if(isset($_GET['search']))
 		$sql = "SELECT * FROM website_dishes WHERE Dish LIKE '%{$_GET['search']}%' ORDER BY Meal_type";
-	else
-		$sql = "SELECT * FROM website_dishes ORDER BY Meal_type";
 	
 	// Fetch all record, convert to JSON and return
 	$results = $mysqli->query($sql)->fetch_all(MYSQLI_ASSOC);
-	print(json_encode($results));
+		print(json_encode($results));
+		
+	
 
 ?>

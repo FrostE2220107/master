@@ -14,16 +14,10 @@
 		<form class="row g-3">
 		  <div class="col-auto">
 			<?php //create the searchbar ?>
-			<input type="text" class="form-control" id="searchBox" placeholder="Search by dish"> 
-		  </div>
-		</form>	
-		<p id="results"></p>
-	</div>
-	
-  </body>
-<select onchange="la(this.value)">
+			
+			<select onchange="la(this.value)">
 
-<option disabled selected>What would you like to Search by?</option>
+<option disabled selected>What would you like to Search by?</option> 
 
 <option value="a2_page2.php">Dish</option>
 
@@ -32,6 +26,17 @@
 <option value = "a2_page2_2.php">Meal Type</option>
 
 </select>
+
+			<input type="text" class="form-control" id="searchBox" placeholder="Search by dish"> 
+		  </div>
+		</form>	
+		<p id="results"></p>
+	</div>
+	
+	
+	
+  </body>
+
 
 <script>
 

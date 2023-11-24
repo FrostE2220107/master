@@ -13,15 +13,11 @@ table, th, td {
 <body>
 <?php
 include 'a2_banner.php';
-echo "Welcome to the complete cookbook, where you can find all our recipies listed, you can look here for your next dish, but we reccomend searching instead";
-//Connect to server/database
-$mysqli = mysqli_connect("localhost", "2220107", "Skylanders3", "db2220107");
-if ($mysqli -> connect_errno) {
-  echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
-  exit();
-} else {
-echo "Connected to the database successfully.";
-}
+include 'a2_dbconnect.php';
+echo "<br>";
+echo "Welcome to the complete cookbook, where you can find all our recipies listed, you can look here for your next dish, but we reccomend searching instead  \r\n";
+
+
 // Run SQL query
 $res = mysqli_query($mysqli, "SELECT Dish, Main_ingredient, Ingredient2, Ingredient3, Meal_type, Main_flavour, Prep_time, Serves FROM website_dishes");
 
