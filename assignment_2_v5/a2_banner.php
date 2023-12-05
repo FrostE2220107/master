@@ -12,7 +12,7 @@ table, th, td {
  </table>
  <table style="width:100%">
  <td><?php echo " <a href='a2_menu.php'>Home</a>"; ?></td>
- <td><?php echo " <a href='a2_register.php'>Make your account</a>"; ?></td>
+<!-- <td><?php //echo " <a href='a2_register.php'>Make your account</a>"; ?></td> -->
  <td><?php echo " <a href='a2_login.php'>Sign in</a>"; ?></td>
  <td><?php echo "<a href='a2_page1.php'>Complete Cookbook </a>"; ?></td>
  <td><?php echo "<a href='a2_page2.php'>Dish finder </a>"; ?></td>

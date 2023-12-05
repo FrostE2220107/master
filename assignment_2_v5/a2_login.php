@@ -1,4 +1,5 @@
 <?php
+	session_start();
 	include 'a2_banner.php';
 	if(isset($_POST['login'])){
  
@@ -13,9 +14,11 @@
 		//check if the user details are vallid
 		if (mysqli_num_rows($query) == 0){
 			$_SESSION['message']="Login Failed. User not Found!";
-			header('location:index.php');
+			header('location:a2_index.php');
 		}
 		else{
+			 $_SESSION['loggedin'] = true;
+			 $_SESSION['username'] = $username;
 			$row=mysqli_fetch_array($query);
  
 			if (isset($_POST['remember'])){
@@ -25,7 +28,7 @@
 			}
  
 			$_SESSION['uid']=$row['id'];
-			header('location:a2_success.php');
+			header('location:a2_menu.php');
 		}
 	}
 	else{

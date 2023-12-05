@@ -7,6 +7,6 @@
 		setcookie("pass", '', time() - (3600));
 	}
  
-	header('location:a2_index.php');
+	header('location:a2_menu.php');
  
 ?>

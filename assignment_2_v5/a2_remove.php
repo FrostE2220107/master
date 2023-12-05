@@ -8,7 +8,7 @@ table, th, td {
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Complete cookbook</title>
+    <title>Remove your dish</title>
     </head>
 <body>
 <?php
@@ -17,9 +17,16 @@ include 'a2_banner.php';
 include 'a2_dbconnect.php';
 include 'a2_logged.php';
 echo "<br>";
-echo "Welcome to the complete cookbook, where you can find all our recipies listed, you can look here for your next dish, but we reccomend searching instead  \r\n";
+echo "If you wish to remove your dish, please enter it's ID number as shown in the database below \r\n";
+?>
+<br>
+<form action="a2_delete.php" method="POST">
+  <label for="lname">ID of dish to be removed:</label><br>
+  <input type="number" id="number_" name="number" value="">
+  <input type="submit" value="Submit">
+</form> 
 
-
+<?php
 // Run SQL query
 $res = mysqli_query($mysqli, "SELECT number, Dish, Main_ingredient, Ingredient2, Ingredient3, Meal_type, Main_flavour, Prep_time, Serves FROM website_dishes");
 
@@ -32,7 +39,7 @@ if(!$res) {
 ?>
 <table style="width:100%">
   <tr>
-	<th>ID</th>
+  	<th>ID</th>
     <th>Dish</th>
     <th>Main Ingredient</th>
 	<th>Ingredient 2</th>

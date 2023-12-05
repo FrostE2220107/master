@@ -3,11 +3,14 @@
     <title>Add your dish</title>
 <body>
 
-<?php include 'a2_banner.php'; ?>
+<?php 
+session_start();
+include 'a2_banner.php'; 
+include 'a2_logged.php';?>
 
 <h2>Add your Dish</h2>
 
-<?php //give the user the form to enter their inputs ?>
+<?php//give the user the form to enter their inputs ?>
 <form action="a2_insert.php">
   <label for="fname">Dish:</label><br>
   <input type="text" id="dish_" name="dish" value=""><br>
